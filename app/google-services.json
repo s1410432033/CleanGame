@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "431517122435",
+    "firebase_url": "https://cleangamedemo.firebaseio.com",
+    "project_id": "cleangamedemo",
+    "storage_bucket": "cleangamedemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431517122435:android:4aaa2425995fba12",
+        "android_client_info": {
+          "package_name": "com.example.huanghuai.cleangamedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431517122435-hg78crm5636miq0aruedcoedje06uvc4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.huanghuai.cleangamedemo",
+            "certificate_hash": "347f9522641cb273c3d27d378c14fd4b06e2a902"
+          }
+        },
+        {
+          "client_id": "431517122435-2ddj090jpd8hvdrr89d3v9b4d50sujsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxHtgkhHUrSbM20fWZjmx1zrX4hnHT8No"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431517122435-2ddj090jpd8hvdrr89d3v9b4d50sujsv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

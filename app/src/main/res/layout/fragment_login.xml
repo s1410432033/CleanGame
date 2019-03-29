@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+    <data>
+        <variable
+            name="contract"
+            type="com.example.huanghuai.cleangamedemo.ui.LogIn.LoginFragment"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintVertical_bias="0.6"
+
+        android:background="#DDDDDD	"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintVertical_bias="0.8"
+        android:text="登入及註冊"
+        android:background="#444444"
+        android:textColor="#ffffff"
+        android:onClick="@{()->contract.logBtnEvent()}"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="若姓名不重複即可註冊!"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintVertical_bias="0.9"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="姓名"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintVertical_bias="0.3"
+        android:inputType="text"
+        android:maxLines="1"
+        android:id="@+id/userName"/>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="密碼"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintVertical_bias="0.45"
+        android:inputType="text"
+        android:maxLines="1"
+        android:id="@+id/userPassword"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>
