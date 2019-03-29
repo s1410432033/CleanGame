@@ -15,7 +15,7 @@ import com.android.databinding.library.baseAdapters.BR;
             this.mViewDataBinding = mViewDataBinding;
         }
         public void bind(final Object object){
-            mViewDataBinding.setVariable(BR._all,object);
+            mViewDataBinding.setVariable(BR.room,object);
             mViewDataBinding.executePendingBindings();
         }
     }

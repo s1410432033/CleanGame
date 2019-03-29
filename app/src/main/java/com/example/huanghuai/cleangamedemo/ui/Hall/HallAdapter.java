@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.huanghuai.cleangamedemo.databinding.HallItemBinding;
+import com.example.huanghuai.cleangamedemo.util.Room;
 import com.example.huanghuai.cleangamedemo.util.ViewHolder;
 
 import java.util.ArrayList;
@@ -17,11 +18,13 @@ import java.util.ArrayList;
  */
 
 public class HallAdapter extends RecyclerView.Adapter<ViewHolder<HallItemBinding>> implements Adpater {
-    private ArrayList roomArray;
+    private ArrayList<Room> roomArray;
     private HallItemBinding hallItemBinding;
-    public HallAdapter(ArrayList roomArray){
-        this.roomArray = new ArrayList();
+    private HallContract.View view;
+    public HallAdapter(ArrayList<Room> roomArray,HallContract.View view){
+        this.roomArray = new ArrayList<Room>();
         this.roomArray = roomArray;
+        this.view = view;
     }
     @NonNull
     @Override
@@ -33,8 +36,8 @@ public class HallAdapter extends RecyclerView.Adapter<ViewHolder<HallItemBinding
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder<HallItemBinding> holder, int position) {
-        hallItemBinding.roomName.setText((String)roomArray.get(position));
-        holder.bind(hallItemBinding);
+        hallItemBinding.roomName.setText(roomArray.get(position).getRoomName());
+        holder.bind(roomArray.get(position));
     }
 
     @Override
@@ -43,7 +46,7 @@ public class HallAdapter extends RecyclerView.Adapter<ViewHolder<HallItemBinding
     }
 
     @Override
-    public void onclick(View v) {
-        Log.e("onclick", "onclick: " );
+    public void onclick(View v,Room room) {
+        view.itemClick(v,room);
     }
 }

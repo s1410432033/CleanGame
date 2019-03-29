@@ -1,9 +1,12 @@
 package com.example.huanghuai.cleangamedemo.ui.Hall;
 
+import android.app.FragmentTransaction;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
 
 import com.example.huanghuai.cleangamedemo.base.BasePresenterImp;
+import com.example.huanghuai.cleangamedemo.util.Room;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -27,10 +30,18 @@ public class HallPresenter<V extends HallContract.View> extends BasePresenterImp
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         for (DocumentSnapshot s:task.getResult().getDocuments()){
-                            roomArray.add(s.getId());
+                            Room room = new Room();
+                            room.setRoomName(s.getId());
+                            roomArray.add(room);
                         }
                         getView().setRecycleView(roomArray);
                     }
                 });
     }
+
+    @Override
+    public void itemEvent(View v, Room room) {
+        Log.e("pre", "itemEvent: "+room.getRoomName() );
+    }
+
 }

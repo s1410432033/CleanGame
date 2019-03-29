@@ -7,12 +7,15 @@
         <variable
             name="item"
             type="com.example.huanghuai.cleangamedemo.ui.Hall.Adpater"/>
+        <variable
+            name="room"
+            type="com.example.huanghuai.cleangamedemo.util.Room"/>
     </data>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@drawable/hall_item_style"
-        android:onClick="@{(v)->item.onclick(v)}">
+        android:onClick="@{(v)->item.onclick(v,room)}">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
