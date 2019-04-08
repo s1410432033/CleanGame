@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
+    <data>
+        <variable
+            name="roomView"
+            type="com.example.huanghuai.cleangamedemo.ui.SettingRoom.SettingContract.View"/>
+    </data>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editText"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            app:hintTextAppearance="@style/TextLabel"
+            app:layout_constraintBottom_toTopOf="@+id/team"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:id="@+id/tName"
+                android:hint="@string/dialog_team_name_hint"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/team"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Spinner
+            android:id="@+id/team"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:entries="@array/team"
+            app:layout_constraintBottom_toTopOf="@+id/member"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <Spinner
+            android:id="@+id/member"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:entries="@array/member"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/team" />
+
+        <Button
+            android:id="@+id/setRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="@{()->roomView.setRoom()}"
+            android:text="@string/dialog_check_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/dialog_team_amount_text"
+            app:layout_constraintBottom_toTopOf="@+id/team"
+            app:layout_constraintStart_toStartOf="@+id/team" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/dialog_member_amount_text"
+            app:layout_constraintBottom_toTopOf="@+id/member"
+            app:layout_constraintStart_toStartOf="@+id/member" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</layout>
+
+
+
+

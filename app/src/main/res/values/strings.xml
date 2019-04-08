@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">CleanGameDemo</string>
+
+    <string name="dialog_check_button">確認</string>
+    <string name="dialog_team_amount_text">隊伍數量</string>
+    <string name="dialog_member_amount_text">成員數量</string>
+    <string name="dialog_team_name_hint">隊伍名稱</string>
+
+    <string-array name="team">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="member">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>
